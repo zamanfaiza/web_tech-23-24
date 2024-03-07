@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login</title>
+</head>
+
+<body>
+    <h3><u>Login</u></h3><br>
+            ID: <input type="text" name=""><br><br>
+            Pass:<input type="password" name=""><br><br>
+            <button>login</button>
+            <a href="reg.html"><button>reg</button></a>
+
+
+</body>
+
+</html>

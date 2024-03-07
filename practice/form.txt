@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			First Name : <input type="text" name=""><br><br>
+			Last Name : <input type="text" name=""><br><br>
+			Email:<input type="Email" name=""><br>
+			(Your email address will be your user name)<br><br>
+			Retype Email :<input type="Email" name=""><br><br>
+			Password : <input type="Password" name=""><br>
+			         (Min. 8 characters, 1 number, case-sensitive)<br><br>
+			Retype Password : <input type="Password" name=""><br><br>
+			Address : <input type="text" name=""><br><br>
+			City :<input type="text" name=""><br><br>
+			<label>State :</label>
+			<select>
+				<option disabled selected>Choose a state</option>
+				<option>state 1</option>
+				<option>state 2</option>
+				<option>state 3</option>
+
+			</select><br><br>
+			Zip Code : <input type="text" name="">
+			<button type="button" disabled>optional</button><br><br>
+			Phone : <input type="text" name="">
+			<select>
+				<option disabled selected>Mobile</option>
+			</select><br>
+			No spaces or dashes
+			<br><br>
+			<label>Date of Birth :</label>
+			<select>
+				<option disabled selected>Month</option>
+				<option>January</option>
+				<option>February</option>
+				<option>March</option>
+
+			</select>
+			<select>
+				<option disabled selected>Day</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+
+			</select>
+			<select>
+				<option disabled selected>Year</option>
+				<option>2000</option>
+				<option>2001</option>
+				<option>2002</option>
+
+			</select><br><br>
+			<label>Gender :</label>
+			<select>
+				<option disabled selected>Choose a gender</option>
+				<option>male</option>
+				<option>female</option>
+				<option>others</option>
+			</select><br><br>
+
+			<label>Security Question : </label>
+			<select>
+				<option disabled selected>Choose a security question</option>
+				<option>Question 1</option>
+				<option>Question 2</option>
+				<option>Question 3</option>
+			</select><br><br>
+
+			Security Answer : <input type="text" name=""><br>
+			                 (Not case sensitive)
+
+
+		</fieldset><br>
+		<fieldset>
+			<h3>Personal information</h3>
+			First Name : <input type="text" name=""><br><br>
+			Last Name : <input type="text" name=""><br><br>
+			<label>Date of Birth :</label>
+			<select>
+				<option disabled selected>Month</option>
+				<option>January</option>
+				<option>February</option>
+				<option>March</option>
+
+			</select>
+			<select>
+				<option disabled selected>Day</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+
+			</select>
+			<select>
+				<option disabled selected>Year</option>
+				<option>2000</option>
+				<option>2001</option>
+				<option>2002</option>
+
+			</select><br><br>
+			<label>Gender :</label>
+			<select>
+				<option disabled selected>Choose a gender</option>
+				<option>male</option>
+				<option>female</option>
+				<option>others</option>
+			</select><br>
+			<h3>Account Information</h3>
+			Email:<input type="Email" name=""><br><br>
+			Retype Email :<input type="Email" name=""><br><br>
+			Password : <input type="Password" name=""><br><br>
+			Retype Password : <input type="Password" name=""><br><br>
+			<label>Security Question : </label>
+			<select>
+				<option disabled selected>Choose a security question</option>
+				<option>Question 1</option>
+				<option>Question 2</option>
+				<option>Question 3</option>
+			</select><br><br>
+
+			Security Answer : <input type="text" name=""><br>
+			                 (Not case sensitive)<br>
+
+			<h3>Contact Information</h3>
+			Address : <input type="text" name=""><br><br>
+			City :<input type="text" name=""><br><br>
+			<label>State :</label>
+			<select>
+				<option disabled selected>Choose a state</option>
+				<option>state 1</option>
+				<option>state 2</option>
+				<option>state 3</option>
+
+			</select><br><br>
+			Zip Code : <input type="text" name="">
+			<button type="button" disabled>optional</button><br><br>
+			Phone : <input type="text" name="">
+			<select>
+				<option disabled selected>Mobile</option>
+			</select><br>
+			
+		</fieldset>
+	</form>
+
+
+
+</body>
+</html>
