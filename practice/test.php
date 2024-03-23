@@ -22,11 +22,51 @@ if (isset($_GET['edit']))
 
         // Display edit form with existing values
         echo '<form method="POST" action="">
+
             <input type="hidden" name="id" value="' . $r2['ID'] . '">
-            Name: <input type="text" name="name" value="' . $r2['NAME'] . '"><br>
-            Email: <input type="email" name="email" value="' . $r2['EMAIL'] . '"><br>
-            Pass: <input type="password" name="pass" value="' . $r2['PASS'] . '"><br>
-            <button type="submit" name="update">Update</button>
+            <table>
+            <tr>
+				<th colspan="2">
+					Update
+				</th>
+			</tr>
+            <tr>
+            	<td>
+            		Name:
+            	</td>
+            	<td>
+             		<input type="text" name="name" value="' . $r2['NAME'] . '"><br>
+            	</td>
+            </tr>
+            <tr>
+            	<td>
+            		Email:
+            	</td>
+            	<td>
+              		<input type="email" name="email" value="' . $r2['EMAIL'] . '"><br>
+           		</td>
+            </tr>
+             <tr>
+            	<td>
+            		Pass:
+            	</td>
+            	<td>
+              		<input type="password" name="pass" value="' . $r2['PASS'] . '"><br>
+           		</td>
+            </tr>
+            <tr>
+            	<td>
+            		<button type="submit" name="update">Update</button>
+            	</td>
+            </tr> 
+            <tr>
+            	<td>
+            	</td>
+            </tr> 
+            <tr>
+            	<td>
+            	</td>
+            </tr> 
         </form>';
     } 
    
@@ -50,6 +90,7 @@ if (isset($_GET['delete']))
    $id= $_GET['delete'];
    $sql2="delete from test where id='$id'";
    mysqli_query($conn,$sql2);
+   header("location:test.php");
 
  
 }
@@ -78,9 +119,36 @@ if (isset($_GET['btn']))
  
    }
 }
+
+//insert operation//
+
+if(isset($_POST['reg'])){
+    if(empty($_POST['id'])||empty($_POST['name'])||empty($_POST['email'])||empty($_POST['pass']))
+    {
+        echo "Fill up the form first";
+    }
+    else
+    {
+        $id=$_POST['id'];
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $pass=$_POST['pass'];
+        $sql="INSERT INTO test VALUES ('$id','$name','$email','$pass')";
+        $res=mysqli_query($conn,$sql);
+        header("location:test.php");
+        if($res)
+        {
+            echo "Registration Done";
+        }
+ 
+    }
+}
+ 
+ 
 ?>
 
-<<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head>
 	
@@ -88,38 +156,126 @@ if (isset($_GET['btn']))
 <body>
 	<form>
 	<table border="1">
-	<tr>
-		<th>ID</th>
-		<th>NAME</th>
-		<th>EMAIL</th>
-		<th>PASS</th>
-		<th colspan="2">Option</th>
-	</tr>
+		<tr>
+				<th colspan="6">
+					Database
+				</th>
+		</tr>
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>EMAIL</th>
+			<th>PASS</th>
+			<th colspan="2">Option</th>
+		</tr>
 
 
-<?php while($r = mysqli_fetch_assoc($result)){?>
+	<?php while($r = mysqli_fetch_assoc($result)){?>
 
-	<tr>
-		<td><?php echo $r["ID"] ?></td>
-		<td><?php echo $r["NAME"] ?></td>
-		<td><?php echo $r["EMAIL"] ?></td>
-		<td><?php echo $r["PASS"] ?></td>
-		<td><button name="edit" value="<?php echo $r["ID"] ?>">EDIT</button></td>
-		<td><button name="delete" value="<?php echo $r["ID"] ?>">DELETE</button></td>
+		<tr>
+			<td><?php echo $r["ID"] ?></td>
+			<td><?php echo $r["NAME"] ?></td>
+			<td><?php echo $r["EMAIL"] ?></td>
+			<td><?php echo $r["PASS"] ?></td>
+			<td><button name="edit" value="<?php echo $r["ID"] ?>">EDIT</button></td>
+			<td><button name="delete" value="<?php echo $r["ID"] ?>">DELETE</button></td>
 
 
-	</tr>
+		</tr>
 
-<?php } ?>
+	<?php } ?>
 
-</table>
+	</table>
+
+<br>
+
 </form>
 
 <form>
-<h1>Login</h1>
-   Id: <input type="text" name="id"><br>
-   Pass: <input type="password" name="pass"><br>
-<button value="btn" align="center">submit</button>
+	<fieldset>
+		<table>
+			<tr>
+				<td colspan="2">
+					<h1>Login</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Id:
+				</td>
+				<td>
+					<input type="text" name="id">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Pass:
+				</td>
+				<td>
+					<input type="password" name="pass">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button value="btn">submit</button>
+				</td>
+				
+			</tr>
+
+		</table>
+	</fieldset>
+</form>
+
+<br>
+
+<form method="post">
+	<fieldset>
+		<table>
+			<tr>
+				<td colspan="2">
+					<h1>Registration</h1>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					ID:
+				</td>
+				<td>
+					<input type="text" name="id"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Name:
+				</td>
+				<td>
+					<input type="text" name="name"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Email:
+				</td>
+				<td>
+					<input type="text" name="email"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Pass:
+				</td>
+				<td>
+					<input type="password" name="pass"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button name="reg">Add</button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+     
 </form>
 
 </body>
