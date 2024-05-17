@@ -1,0 +1,335 @@
+.home {
+  background: #490e79;
+  opacity: 0.7;
+  padding-left: 10px;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas:
+    "card card"
+    "chart bar"
+    "graph graph";
+
+  .card {
+    grid-area: card;
+  }
+  .chart {
+    grid-area: chart;
+  }
+  .bar {
+    grid-area: bar;
+  }
+  .graph {
+    grid-area: graph;
+  }
+}
+/* -----------------------------------------card--------------------------------- */
+.card {
+  display: grid;
+
+  grid-template-rows: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "card-info weather";
+
+  height: 100%;
+  width: 100%;
+
+  .card-info {
+    grid-area: card-info;
+  }
+
+  .weather {
+    grid-area: weather;
+  }
+}
+
+/* ------------------------------card-info----------------------------------- */
+.card .card-info {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas:
+    "recent_booking total_tour"
+    "payment new_message";
+}
+/* ----------------------recent booking---------------------------- */
+.card-info .recent_booking {
+  grid-area: recent_booking;
+
+  height: 95%;
+  width: 100%;
+  background-color: #f3d3da;
+  border-radius: 5px;
+  margin: 5px 2px;
+}
+.recent_booking {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "book_icon booking book_arrow";
+
+  .book_icon {
+    grid-area: book_icon;
+    .bx {
+      position: absolute;
+      /* right: 20px; */
+      top: 11%;
+      transform: translate(5%);
+      font-size: 70px;
+    }
+  }
+  .booking {
+    grid-area: booking;
+    height: 100%;
+    width: 100%;
+    p {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 1.5px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h4 {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 22px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  .book_arrow {
+    grid-area: book_arrow;
+    height: 100%;
+    width: 100%;
+    a .fa-solid {
+      width: 10vw;
+      padding-top: 50%;
+      padding-left: 50%;
+      text-align: justify;
+    }
+  }
+}
+/* --------------------------------total tour------------------ */
+.card-info .total_tour {
+  grid-area: total_tour;
+  height: 95%;
+  width: 100%;
+  background-color: #f3c1f0;
+  border-radius: 5px;
+  margin: 5px 5px;
+}
+.total_tour {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "tour_icon tour tour_arrow";
+
+  .tour_icon {
+    grid-area: tour_icon;
+    .bx {
+      position: absolute;
+      /* right: 20px; */
+      top: 11%;
+      transform: translate(5%);
+      font-size: 70px;
+    }
+  }
+  .tour {
+    grid-area: tour;
+    height: 100%;
+    width: 100%;
+    p {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 1.5px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h4 {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 22px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  .tour_arrow {
+    grid-area: tour_arrow;
+    height: 100%;
+    width: 100%;
+    a .fa-solid {
+      width: 10vw;
+      padding-top: 50%;
+      padding-left: 50%;
+      text-align: justify;
+    }
+  }
+}
+/* ----------------------payment--------------------------- */
+.card-info .payment {
+  grid-area: payment;
+  height: 95%;
+  width: 100%;
+  background-color: #9039a2;
+  border-radius: 5px;
+  margin: 5px 2px;
+}
+.payment {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "payment_icon payment_text payment_arrow";
+
+  .payment_icon {
+    grid-area: payment_icon;
+    .bx {
+      position: absolute;
+      /* right: 20px; */
+      top: 27%;
+      transform: translate(5%);
+      font-size: 70px;
+    }
+  }
+  .payment_text {
+    grid-area: payment_text;
+    height: 100%;
+    width: 100%;
+    p {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 1.5px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h4 {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  .payment_arrow {
+    grid-area: payment_arrow;
+    height: 100%;
+    width: 100%;
+    a .fa-solid {
+      width: 10vw;
+      padding-top: 50%;
+      padding-left: 50%;
+      text-align: justify;
+    }
+  }
+}
+/* ----------------------new message--------------------------- */
+.card-info .new_message {
+  grid-area: new_message;
+  height: 95%;
+  width: 100%;
+  background-color: #c1ddf3;
+  border-radius: 5px;
+  margin: 5px 5px;
+}
+.new_message {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: "msg_icon messages msg_arrow";
+
+  .msg_icon {
+    grid-area: msg_icon;
+    .bx {
+      position: absolute;
+      /* right: 20px; */
+      top: 27%;
+      transform: translate(5%);
+      font-size: 70px;
+    }
+  }
+
+  .messages {
+    grid-area: messages;
+    height: 100%;
+    width: 100%;
+    p {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 1.5px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h4 {
+      text-align: justify;
+      padding-left: 15px;
+      padding-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+  .msg_arrow {
+    grid-area: msg_arrow;
+    height: 100%;
+    width: 100%;
+    a .fa-solid {
+      width: 10vw;
+      padding-top: 50%;
+      padding-left: 50%;
+      text-align: justify;
+    }
+  }
+}
+/* ----------------------------------weather---------------------------------- */
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: #f3d3da;
+  gap: 0.5vw;
+  /* padding-left: 1vw; */
+  font-size: 1.2vw;
+  color: #173c66;
+
+  img {
+    height: 5.5vw;
+    width: 5.5vw;
+  }
+}
+#BarChart {
+  margin-top: -13vw;
+  margin-left: 7vw;
+  height: 22.9vw;
+  width: 38.5vw;
+  background-color: white;
+  border-radius: 1vw;
+  text-align: center;
+  color: #db8017;
+  font-style: italic;
+  font-size: 1.1vw;
+  box-shadow: 4px 4px 4px rgb(39, 23, 23);
+  position: absolute;
+}
+#Line {
+  margin-top: -17vw;
+  margin-left: 1vw;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 1vw;
+  text-align: center;
+  color: #db8017;
+  font-style: italic;
+  font-size: 1.1vw;
+  box-shadow: 4px 4px 4px rgb(39, 23, 23);
+  position: absolute;
+}
+#Chart {
+}

@@ -1,0 +1,72 @@
+.tourGuideReview {
+  background: #490e79;
+  opacity: 0.7;
+  padding-left: 10px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+div.summary,
+div.filters,
+div.review-list {
+  background-color: white;
+  margin: 10px auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div.filters input,
+div.filters select {
+  padding: 8px;
+  margin-right: 5px;
+}
+
+div.filters button {
+  padding: 10px 15px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+div.filters button:hover {
+  background-color: #005f73;
+}
+
+div.review-item {
+  border-top: 1px solid #eee;
+  padding: 10px;
+}
+
+div.review-item form {
+  margin-top: 10px;
+}
+
+div.review-item textarea {
+  width: 80%;
+  height: 80px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+div.review-item button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+div.review-item button:hover {
+  background-color: #45a049;
+}

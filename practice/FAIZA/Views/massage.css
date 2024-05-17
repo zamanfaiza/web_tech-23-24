@@ -1,0 +1,13 @@
+/* Main content styling */
+.massage {
+  background: #490e79;
+  opacity: 0.7;
+  padding-left: 10px;
+}
+.main {
+  padding: 20px;
+  background-color: #fff; /* White background for clarity */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Ensures no overflow */
+}
